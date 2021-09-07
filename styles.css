@@ -1,0 +1,534 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-size: 26px;
+    font-family: 'Monserrat', 'Arial Narrow', Arial, sans-serif;  
+}
+.main {
+    height: 100vh;
+    width: 100vw;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+.contact {
+    margin-top: 75px;
+    color:white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    line-height: 2em;
+    position: relative;
+    top: 30px;
+    font-size: .8em;
+}
+.email {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -5px;
+}
+.phone {
+    text-align: center;
+}
+.mediaicons {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    top: 15px;
+    width: 100%;
+    font-size: 1.8em;
+}
+.fab.fa-linkedin::before {
+    padding: 10px;
+    color: rgb(87, 126, 177);
+}
+.fab.fa-github::before  {
+    padding: 10px;
+    color: white;
+}
+.parallax-wrapper {
+    width: 100vw;
+    height: auto;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+.parallax-wrapper::before {
+    content:"";
+    width: 100vw;
+    height: 130vh;
+    top: 0;
+    left: 0;
+    background-image: url("images/coolbg.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    transform:translateZ(-1px) scale(2);   
+}
+.regular-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 25vh;
+    background-image: url("images/rain.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    transform: skewY(-3deg);
+    z-index: 2;
+    position: relative;
+    top:-6vh;
+}
+.regular-wrapper2 {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 7vh;
+    background-image: url("images/last.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    z-index: 2;
+    position: relative;
+    box-sizing: border-box;
+}
+.content{
+    margin:0 auto;
+    padding: 50px;
+    width: 45vw;
+    min-width: 300px;
+    height: 50vh;
+    opacity: 85%;
+    background: black;
+    transform: skewY(3deg);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content span {
+    color: white;
+    text-transform: uppercase;
+    display: block;
+}
+.text1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 3s 1;
+}
+#text2 {
+    text-align: center;
+    font-size: 30px;
+    color: #6ab04c;
+}
+@keyframes text {
+    0%{
+        color:black;
+        margin-bottom: -90px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+.content2{
+    margin:0 auto;
+    padding: 50px 50px 50px 35px;
+    height: auto;
+    width: 75%;
+    line-height: 1.2em;
+    opacity: 89%;
+    background: rgb(26, 25, 25);
+    color: rgb(224, 224, 224);
+    transform: skewY(0deg);
+    border-radius: 15px;
+    position: relative;
+    top:-130px;
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: auto 30% 30%;
+    grid-template-rows: 6% 25% auto 6% 28%;
+    grid-template-areas: 
+    "photo head head"
+    "photo main main"
+    "photo educ educ"
+    "photo title title"
+    "photo skills skills";
+}
+.content2 img{
+    border-radius: 20px;
+    grid-area: photo;
+    width:98%;
+    position: relative;
+}
+.content2 h2{
+    text-decoration: underline;
+    grid-area: head;
+    text-align: center;   
+}
+.content2 p{
+    grid-area: main; 
+    font-size: 1.5vw;
+}
+.education {
+    grid-area: educ;
+    font-size: .7em;
+}
+.content2 h3{
+    text-decoration: underline;
+    grid-area: title;   
+}
+.content2 h4 {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+.content2 ul{
+    position: relative;
+    left: 1vw;
+    grid-area: skills; 
+    font-size: .9em;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+.content3 {
+    margin:0 auto;
+    padding: 50px;
+    width: 80%;
+    height:auto;
+    opacity: 91%;
+    background: rgb(26, 25, 25);
+    color: rgb(224, 224, 224);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:stretch;
+}
+.content3 h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+.projectsections {
+
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    width: 33%;  
+}
+#cpppic {
+    width: 26vw;
+    height: auto;
+}
+#snakepic {
+    width: 26vw;
+    height: auto;
+}
+#wordpresspic {
+    width: 26vw;
+    height: auto;
+}
+.projectsections h2 {
+   margin: 0 0 1vh 0;
+   font-size: 1em;  
+}
+.projectsections p{
+    padding: 1%;
+    font-size: .9em;
+    width:94%;
+}
+.projectsections a{
+text-decoration: none;
+color:red;
+text-align:start;
+}
+
+@media only screen and (max-width: 1350px) {
+    ul.nav_links {
+        display: none;
+    }
+    .contact {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        grid-template-rows: 48% 48%;
+        grid-template-areas: 
+        "email media"
+        "phone media"
+        ;
+    }
+    .email {
+        grid-area: email;
+    }
+    .media {
+        grid-area: media;
+        position: relative;
+        top: -70px;
+    }
+    .phone {
+        grid-area: phone;
+    }
+    .content2 img {
+        top: 0;
+    }
+    .content2 {
+        grid-template-columns:  40% 60%;
+        grid-template-rows: 6% 35% 25% 5% 25%;
+        grid-template-areas: 
+        "photo head"
+        "photo  main"
+        "photo educ"
+        "title title"
+        "skills  skills"
+        ;
+    }
+    .content2 ul{
+        position: relative;
+        top: 6vh;
+        font-size: .9em;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+    .content2 h3{
+        position: relative;
+        font-size: .9em;
+        top: 6vh;
+    }
+    #aboutp {
+        font-size: .85em;
+    }
+    .education p{
+       font-size: 1em; 
+       position: relative;
+       top: -16px;
+    }
+    .content3 {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
+     .projectsections  {
+         width:85vw;
+     }
+     #cpppic {
+        width: 50vw;
+        height: auto;
+    }
+    #snakepic {
+        width: 50vw;
+        height: auto;
+    }
+    #wordpresspic {
+        width: 50vw;
+        height: auto;
+    }
+    .projectsections p {
+        padding: 1em;
+        width: 75vw;
+    }
+    #project1 {
+        border-bottom: .5vh dotted black;
+    }
+    #project2 {
+        border-bottom: .5vh dotted black;
+        padding-top: 15px;
+    }
+    #project3 {
+        padding-top: 15px; 
+    }
+    .regular-wrapper2 {
+        height: auto;
+    }
+  }
+  @media only screen and (max-width: 925px) {
+        .content {
+            width: 60vw;
+        }
+        .content2 p {
+            font-size: 2.7vw;       
+        }
+        #aboutp {
+            font-size: .85em;
+        }
+        .education p{
+           font-size: 1em; 
+        }
+       .content2 ul {
+           font-size: .8em;
+       }
+  }
+  @media only screen and (max-width: 745px) {
+    .mediahead {
+        display: none;
+    } 
+    .content2 {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px; 
+    }
+    #abouthead {    
+        flex-basis: 6%;
+    }
+    #aboutimg {
+        width: 30vw;
+        flex-basis: 20%;
+    }
+    #aboutp {
+        text-align: center;
+        flex-basis: 20%;
+    }
+    #abouth3 {
+        font-size: 4vw;
+        position: relative;
+        top: 0;
+        flex-basis: 6%;
+    }
+    #aboutul {
+        font-size:3vw;
+        top: 0;
+        left: 1vw;
+        flex-basis: 20%;
+    } 
+  }
+  @media only screen and (max-width: 600px) {
+    .contact {
+        top:0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 33%;
+        grid-template-areas: 
+        "email"
+        "phone"
+        "media"
+        ;
+    }
+    .text1 {
+        top:20px;
+    }
+    .email {
+        padding: 10px;
+    }
+    .mediaicons {
+        display: flex;
+        position: relative;
+        justify-content: space-around;
+        top: 45px;
+        width: 75%;
+        font-size: 1.8em;
+    }
+    .parallax-wrapper::before {
+        height:160vh;
+    }
+    #aboutp {
+        font-size: 3.5vw;
+    }
+    #abouth3 {
+        font-size: 3.5vw;
+    }
+    #aboutul {
+        font-size: 3.5vw;
+    } 
+  }
+  @media only screen and (max-width: 500px) {
+    .content {
+        height: auto;
+    }
+    .content3 {
+        padding: 30px;
+    }
+    .content3 p {
+        font-size: .85em;
+        width: 100%;
+    }
+    #aboutp {
+        font-size: 4vw;
+    }
+    #abouth3 {
+        font-size: 4vw;
+    }
+    #aboutul {
+        list-style: none;
+        font-size: 3.8vw;
+    } 
+    .contact {
+        font-size: .7em;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .text1 {
+        padding-top: 10px;
+    }
+    .content2 {
+        height: auto;      
+    }
+    .parallax-wrapper::before {
+        height:190vh;
+    }
+    #aboutp {
+        font-size: 4.8vw;
+    }
+    #abouth3 {
+        font-size: 4.8vw;
+    }
+    #aboutul {
+        text-align: center;
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        list-style: none;
+        font-size: 4.5vw;
+    } 
+    .content3 {
+        padding: 30px;
+    }
+    .content3 p {
+        font-size: .8em;
+        width: 100%;
+        padding-left: 0;
+    }
+    .content3 h2 {
+        font-size: 6vw;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    .content {
+        padding: 10px;
+    }
+    .contact {
+        top: 0px;
+    }
+    .text1 {
+        font-size: 2em;
+        
+    }
+    #text2 {
+        font-size: 1em;   
+    }
+  }
